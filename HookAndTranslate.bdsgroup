@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<PersonalityInfo>
+		<Option>
+			<Option Name="Personality">Default.Personality</Option>
+			<Option Name="ProjectType"></Option>
+			<Option Name="Version">1.0</Option>
+			<Option Name="GUID">{6DD75B78-406B-41BF-AD8C-A1245F3BFAC7}</Option>
+		</Option>
+	</PersonalityInfo>
+	<Default.Personality>
+		<Projects>
+      <Projects Name="HookAndTranslate.exe">src\HookAndTranslate.bdsproj</Projects>
+      <Projects Name="TransHook.dll">src\TransHook.bdsproj</Projects>
+      <Projects Name="GdiHook.dll">src\GdiHook.bdsproj</Projects>
+      <Projects Name="Targets">HookAndTranslate.exe TransHook.dll GdiHook.dll</Projects>
+    </Projects>
+    <Dependencies/>
+  </Default.Personality>
+</BorlandProject>

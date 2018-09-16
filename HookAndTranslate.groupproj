@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{73FC1138-8232-4DB7-9140-05B3600BF64C}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="src\HookAndTranslate.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="src\TransHook.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="src\GdiHook.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="HookAndTranslate">
+        <MSBuild Projects="src\HookAndTranslate.dproj"/>
+    </Target>
+    <Target Name="HookAndTranslate:Clean">
+        <MSBuild Projects="src\HookAndTranslate.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HookAndTranslate:Make">
+        <MSBuild Projects="src\HookAndTranslate.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TransHook">
+        <MSBuild Projects="src\TransHook.dproj"/>
+    </Target>
+    <Target Name="TransHook:Clean">
+        <MSBuild Projects="src\TransHook.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TransHook:Make">
+        <MSBuild Projects="src\TransHook.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GdiHook">
+        <MSBuild Projects="src\GdiHook.dproj"/>
+    </Target>
+    <Target Name="GdiHook:Clean">
+        <MSBuild Projects="src\GdiHook.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GdiHook:Make">
+        <MSBuild Projects="src\GdiHook.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="HookAndTranslate;TransHook;GdiHook"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="HookAndTranslate:Clean;TransHook:Clean;GdiHook:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="HookAndTranslate:Make;TransHook:Make;GdiHook:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
