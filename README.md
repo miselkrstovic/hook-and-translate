@@ -14,14 +14,14 @@ The project was only tested on Windows XP, and thus is not guaranteed to work on
 
 ## TODO
 * Migrate to latest version of RAD Studio
-* Update win32 calls and added platform specific checks
+* Update Win32 calls and add platform specific checks
 * Add command line "/t" to start application in training mode with GUI
 * Use binary trees or similar to speedup lookups
-* Add regex matching to strings detection/lookup/replace
-* Problems with labels and wrong fonts
+* Add regex matching for string detection/lookup/replace
+* Pending problems with labels and wrong fonts
 	* Intercept `TextOut`, `TextOutEx`, `DrawText`, `DrawTextEx`, `ExtTextOut`, `PolyTextOut`, `TabbedTextOut`
-* Find why menu translation is being lost and not persisted
-* Recheck hook freeing at application shutdown
+* Find out why menu translation is being lost and not persisted
+* Recheck hook freeing on application shutdown
 
 ## License
 
